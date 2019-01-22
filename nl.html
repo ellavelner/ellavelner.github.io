@@ -309,9 +309,9 @@
 
 						var el = document.createElement('div');
 
-						if (marker.properties.score == 'low') {el.className = 'marker-low';} 
-						else if (marker.properties.score == 'medium') {el.className = 'marker-medium';}
-						else if (marker.properties.score == 'high' ) {el.className = 'marker-high';}
+						if (marker.properties.score == 'low') {el.className = 'marker-low-big';} 
+						else if (marker.properties.score == 'medium') {el.className = 'marker-medium-big';}
+						else if (marker.properties.score == 'high' ) {el.className = 'marker-high-big';}
 						else {el.className = 'marker';}
 
 						var markerReference = new mapboxgl.Marker(el)
@@ -323,10 +323,6 @@
 						// add marker reference to the list of all current markers
 						mapMarkers.push(markerReference);
 						
-						lala = inp.value;
-						// open popup belonging to company:
-						// https://docs.mapbox.com/mapbox-gl-js/api/#mapmouseevent#point
-						map.openPopup(lala)
 						/*close the list of autocompleted values,
 						(or any other open lists of autocompleted values:*/
 						closeAllLists();
