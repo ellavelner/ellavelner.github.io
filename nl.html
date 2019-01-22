@@ -41,22 +41,22 @@
 	
 	<div class="filter">
 		<label class="container"><p class="txt">Show all</p>
-		<input type="radio" name="radio" checked="checked" onClick="showAll()">
+		<input type="radio" name="radio" checked="checked" onClick="renderMarkers('all');">
 		<span class="checkmark"></span>
 		</label>
 
 		<label class="container"><p class="txt">Legit companies</p>
-		<input type="radio" name="radio" onClick="filterGreen()">
+		<input type="radio" name="radio" onClick="renderMarkers('low')">
 		<span class="checkmark"></span>
 		</label>
 
 		<label class="container"><p class="txt">Doubtfull companies</p>
-		<input type="radio" name="radio" onClick="filterYellow()">
+		<input type="radio" name="radio" onClick="renderMarkers('medium')">
 		<span class="checkmark"></span>
 		</label>
 
 		<label class="container"><p class="txt">Fraudulant companies</p>
-		<input type="radio" name="radio" onClick="filterRed()">
+		<input type="radio" name="radio" onClick="renderMarkers('high')">
 		<span class="checkmark"></span>
 		</label>
 	</div>
@@ -224,24 +224,46 @@
 			}
 		}]
 	};
+
+	// keep a list of all current markers on the map (so we can access them later)
+	var mapMarkers = [];
 	
-	// add markers to map
-	geojson.features.forEach(function(marker) {
-		// create a HTML element for each feature
-		var el = document.createElement('div');
+	// place all markers on the map (with an optional filter)
+	function renderMarkers(mapFilter='all') {
+
+		// First step: remove all current markers from the map
+		mapMarkers.forEach(function(marker) {
+			marker.remove();
+		});
+		mapMarkers = [];
+
+		// Loop through all geojson points and make a marker IF the filter is satisfied
+		geojson.features.forEach(function(marker) {
+			// create a HTML element for each feature
+			var el = document.createElement('div');
+
 			if (marker.properties.score == 'low') {el.className = 'marker-low';} 
 			else if (marker.properties.score == 'medium') {el.className = 'marker-medium';}
 			else if (marker.properties.score == 'high' ) {el.className = 'marker-high';}
 			else {el.className = 'marker';}
-			
-		
-		// make a marker for each feature and add to the map
-		new mapboxgl.Marker(el)
-		.setLngLat(marker.geometry.coordinates)
-		.setPopup(new mapboxgl.Popup({offset: 10}) // add popups
-		.setHTML('<h2>' + marker.properties.title + '</h2><p><b>Company Address</b><br>' + marker.properties.address + '</p><p><b>Correspondence Address</b><br>' + marker.properties.ca + '</p><p><b>SBI</b><br>' + marker.properties.sbi + '</p><p><b>Legal form</b><br>' + marker.properties.rechtsvorm + '</p><p><b>Website: </b><a href = '+ marker.properties.website +' target="_blank">' + marker.properties.website + '</a></p>'))
-		.addTo(map);
-	});
+				
+			// place a marker if the geojson point score equals the filter OR if we want to show all points
+			if ( mapFilter == marker.properties.score || mapFilter=='all') {
+				var markerReference = new mapboxgl.Marker(el)
+				.setLngLat(marker.geometry.coordinates)
+				.setPopup(new mapboxgl.Popup({offset: 10}) // add popups
+				.setHTML('<h2>' + marker.properties.title + '</h2><p><b>Company Address</b><br>' + marker.properties.address + '</p><p><b>Correspondence Address</b><br>' + marker.properties.ca + '</p><p><b>SBI</b><br>' + marker.properties.sbi + '</p><p><b>Legal form</b><br>' + marker.properties.rechtsvorm + '</p><p><b>Website: </b><a href = '+ marker.properties.website +' target="_blank">' + marker.properties.website + '</a></p>'))
+				.addTo(map);
+
+				// add marker reference to the list of all current markers
+				mapMarkers.push(markerReference);
+			}
+		});
+	}
+
+	// run it once to load all points on opening
+	renderMarkers('all');
+	
 	
 	// search bar!
 	function autocomplete(inp, arr) {
@@ -281,6 +303,25 @@
 							center: findCoordinates(inp.value),
 							zoom: 15
 						});
+
+
+						var marker = getGeoPoint(inp.value);
+
+						var el = document.createElement('div');
+
+						if (marker.properties.score == 'low') {el.className = 'marker-low';} 
+						else if (marker.properties.score == 'medium') {el.className = 'marker-medium';}
+						else if (marker.properties.score == 'high' ) {el.className = 'marker-high';}
+						else {el.className = 'marker';}
+
+						var markerReference = new mapboxgl.Marker(el)
+						.setLngLat(marker.geometry.coordinates)
+						.setPopup(new mapboxgl.Popup({offset: 10}) // add popups
+						.setHTML('<h2>' + marker.properties.title + '</h2><p><b>Company Address</b><br>' + marker.properties.address + '</p><p><b>Correspondence Address</b><br>' + marker.properties.ca + '</p><p><b>SBI</b><br>' + marker.properties.sbi + '</p><p><b>Legal form</b><br>' + marker.properties.rechtsvorm + '</p><p><b>Website: </b><a href = '+ marker.properties.website +' target="_blank">' + marker.properties.website + '</a></p>'))
+						.addTo(map);
+
+						// add marker reference to the list of all current markers
+						mapMarkers.push(markerReference);
 						
 						lala = inp.value;
 						// open popup belonging to company:
@@ -369,6 +410,12 @@
 		c = coordinates[companies.indexOf(company)];
 		return c
 	}
+
+	function getGeoPoint(company) {
+		return geojson.features[companies.indexOf(company)];
+	}
+
+	
 
 	console.log(expected_result);
 	console.log(matching_coordinates);
