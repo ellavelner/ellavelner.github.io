@@ -10,6 +10,7 @@
 	<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
 	<link rel="stylesheet" href="basis.css" type="text/css" />
+	<script type="text/javascript" src="data.geojson"></script>
 </head>
 <body>
 	<header>
@@ -50,12 +51,12 @@
 		<span class="checkmark"></span>
 		</label>
 
-		<label class="container"><p class="txt">Doubtfull companies</p>
+		<label class="container"><p class="txt">Doubtful companies</p>
 		<input type="radio" name="radio" onClick="renderMarkers('medium')">
 		<span class="checkmark"></span>
 		</label>
 
-		<label class="container"><p class="txt">Fraudulant companies</p>
+		<label class="container"><p class="txt">Fraudulent companies</p>
 		<input type="radio" name="radio" onClick="renderMarkers('high')">
 		<span class="checkmark"></span>
 		</label>
@@ -188,9 +189,9 @@
 		});
 	});
 	
-	
+	//load geojson data
 	var geojson = {
-		type: 'FeatureCollection',
+	type: 'FeatureCollection',
 		features: [{
 			type: 'Feature',
 			geometry: {
@@ -223,8 +224,9 @@
 				score: 'high'
 			}
 		}]
-	};
+};
 
+	
 	// keep a list of all current markers on the map (so we can access them later)
 	var mapMarkers = [];
 	
