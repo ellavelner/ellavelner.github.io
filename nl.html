@@ -413,14 +413,6 @@
 		return geojson.features[companies.indexOf(company)];
 	}
 
-	
-
-	console.log(expected_result);
-	console.log(matching_coordinates);
-	console.log(companies);
-	console.log(coordinates[companies.indexOf('Falco Lines B.V.')]);
-	console.log(geojson.features.map);
-	
 	/*initiate the autocomplete function on the "myInput" element, and pass along the companies array as possible autocomplete values:*/
 	autocomplete(document.getElementById("myInput"), companies);	
 	
