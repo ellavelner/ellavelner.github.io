@@ -424,35 +424,6 @@
 	/*initiate the autocomplete function on the "myInput" element, and pass along the companies array as possible autocomplete values:*/
 	autocomplete(document.getElementById("myInput"), companies);	
 	
-	// WANT POPUP FIXED ON SCREEN 
-	// https://www.mapbox.com/help/tutorials/markers-js/ MAYBE?
-	
-	// filter
-	function filterRed(el) {
-		if (el.classList.contains('marker-low')) {div.style.visibility = 'hidden';} 
-		else if (el.classList.contains('marker-medium')) {div.style.visibility = 'hidden';} 
-		else if (el.classList.contains('marker-high')) {div.style.visibility = 'visible';}
-	}
-	
-	function filterYellow() {
-		if (div.classList.contains('marker-low')) {div.style.visibility = 'hidden';} 
-		else if (div.classList.contains('marker-high')) {div.style.visibility = 'hidden';} 
-		else if (div.classList.contains('marker-medium')) {div.style.visibility = 'visible';}
-	}
-	
-	function filterGreen() {
-		if (div.classList.contains('marker-medium')) {div.style.visibility = 'hidden';} 
-		else if (div.classList.contains('marker-high')) {div.style.visibility = 'hidden';} 
-		else if (div.classList.contains('marker-low')) {div.style.visibility = 'visible';}
-	}
-	
-	function showAll() {
-		if (div.classList.contains('marker-low')) {div.style.visibility = 'visible';}
-		else if (div.classList.contains('marker-medium')) {div.style.visibility = 'visible';}
-		else if (div.classList.contains('marker-high')) {div.style.visibility = 'visible';}
-		else {div.style.visibility = 'hidden'}
-	}
-	
 </script>
 
 </body>
