@@ -85,8 +85,8 @@
         //});
 	//}
 	map.on('load', function() {
-		var url = 'data_risk_geojson.geojson';
-		map.addSource('source_id', { type: 'geojson', data: url});
+		var geojson = 'data_risk_geojson.geojson';
+		map.addSource('source_id', { type: 'geojson', data: geojson});
 	});
 	
 	document.getElementById('nl').addEventListener('click', function () {
