@@ -85,8 +85,8 @@
         //});
 	//}
 	map.on('load', function() {
-		var geojson = 'data_risk_geojson.geojson';
-		map.addSource('source_id', { type: 'geojson', data: geojson});
+		var url = 'data_risk_geojson.geojson';
+		map.addSource('source_id', { type: 'geojson', data: url});
 	});
 	
 	document.getElementById('nl').addEventListener('click', function () {
@@ -194,7 +194,7 @@
 	});
 	
 	//load geojson data
-	var geojson = data;
+	var geojson = document.getElementById('source_id');
 	/*{type: 'FeatureCollection',
 		features: [{
 			type: 'Feature',
