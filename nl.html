@@ -84,12 +84,6 @@
             //data: 'https://gist.githubusercontent.com/hrecht/82b6440ed3b982a6f594/raw/48832482382f81d1f6943896626e21b80da6b45c/data.geojson'
         //});
 	//}
-	map.on('load', function() {
-		var url = 'data.geojson';
-		map.addSource('source_id', { type: 'geojson', data: url});
-	});
-	
-	console.log(document.getElementById('source_id'));
 	
 	document.getElementById('nl').addEventListener('click', function () {
     // by up to 5 degrees.
@@ -196,7 +190,7 @@
 	});
 	
 	//load geojson data
-	/*var geojson = {
+	var geojson = {
 	type: 'FeatureCollection',
 		features: [{
 			type: 'Feature',
@@ -230,7 +224,7 @@
 				score: 'high'
 			}
 		}]
-};*/
+};
 
 	
 	// keep a list of all current markers on the map (so we can access them later)
@@ -325,7 +319,7 @@
 						var markerReference = new mapboxgl.Marker(el)
 						.setLngLat(marker.geometry.coordinates)
 						.setPopup(new mapboxgl.Popup({offset: 10}) // add popups
-						.setHTML('<h2>' + marker.properties.Name + '</h2><p><b>Company Address</b><br>' + marker.properties.VA_loc + '</p><p><b>Correspondence Address</b><br>' + marker.properties.CA_loc + '</p><p><b>SBI</b><br>' + marker.properties.SBI + '</p><p><b>Legal form</b><br>' + marker.properties.rechtsvorm + '</p><p><b>Website: </b><a href = '+ marker.properties.url_s +' target="_blank">' + marker.properties.url_s + '</a></p>'))
+						.setHTML('<h2>' + marker.properties.title + '</h2><p><b>Company Address</b><br>' + marker.properties.address + '</p><p><b>Correspondence Address</b><br>' + marker.properties.ca + '</p><p><b>SBI</b><br>' + marker.properties.sbi + '</p><p><b>Legal form</b><br>' + marker.properties.rechtsvorm + '</p><p><b>Website: </b><a href = '+ marker.properties.website +' target="_blank">' + marker.properties.website + '</a></p>'))
 						.addTo(map);
 
 						// add marker reference to the list of all current markers
