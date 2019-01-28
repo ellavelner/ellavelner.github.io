@@ -15,7 +15,7 @@
 <body>
 	<header>
 		<span><a href="index.html" alt="home"><img src="home.png" style="width: 30px; margin-left: 5%;"></a></span>
-		<span style="margin-left: 24%;"><a style="text-decoration: none;" href="index.html" alt="home"><h1 style="display: inline;">Risk Assessment Transport</h1></a></span>
+		<span style="margin-left: 24%;"><a style="text-decoration: none;" href="index.html" alt="home"><h1 style="display: inline;">Risk Assessment Expeditors</h1></a></span>
 		<span style="float:right; margin-right: 5%"><a href="info.html" alt="information"><img src="icon-info.png" style="width: 30px; margin-right: 5px"></a><a href="how.html" alt="how to"><img src="how-to.png" style="width: 30px"></a></span>
 	</header>
 	
@@ -61,6 +61,7 @@
 		<span class="checkmark"></span>
 		</label>
 	</div>
+	
 	
 	<footer>
 		<p>A website made by Don, Ella, Jeffrey, Rouel, Roza &amp; Wessel &copy; 2019 </p>
@@ -4728,7 +4729,7 @@
 						var markerReference = new mapboxgl.Marker(el)
 						.setLngLat(marker.geometry.coordinates)
 						.setPopup(new mapboxgl.Popup({offset: 10}) // add popups
-						.setHTML('<h2>Transportbedrijf X</h2><p><b>Company Address</b><br>Industrieterrein 1A ' + marker.properties.GEMNAAM + '1234AB</p><p><b>Correspondence Address</b><br>Postbus 123 ' + marker.properties.GEMNAAM + '</p><p><b>Legal form</b><br>' + marker.properties.RECHTSVORM + '</p><p><b>Suspiciousness</b><br>' + marker.properties.score + '</p><p><b>Website: </b><a target="_blank">www.transportbedrijfx.nl</a></p>'))
+						.setHTML('<h2>' + marker.properties.Name + '</h2><p><b>Company Address</b><br>' + marker.properties.VA_loc + '</p><p><b>Correspondence Address</b><br>' + marker.properties.CA_loc + '</p><p><b>SBI</b><br>' + marker.properties.SBI + '</p><p><b>Suspiciousness</b><br>' + marker.properties.score + '</p><p><b>Website: </b><a href = '+ marker.properties.url_s +' target="_blank">' + marker.properties.url_s + '</a></p>'))
 						.addTo(map);
 
 						// add marker reference to the list of all current markers

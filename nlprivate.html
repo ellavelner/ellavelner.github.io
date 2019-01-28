@@ -4728,7 +4728,7 @@
 						var markerReference = new mapboxgl.Marker(el)
 						.setLngLat(marker.geometry.coordinates)
 						.setPopup(new mapboxgl.Popup({offset: 10}) // add popups
-						.setHTML('<h2>Transportbedrijf X</h2><p><b>Company Address</b><br>Industrieterrein 1A ' + marker.properties.GEMNAAM + '1234AB</p><p><b>Correspondence Address</b><br>Postbus 123 ' + marker.properties.GEMNAAM + '</p><p><b>Legal form</b><br>' + marker.properties.RECHTSVORM + '</p><p><b>Suspiciousness</b><br>' + marker.properties.score + '</p><p><b>Website: </b><a target="_blank">www.transportbedrijfx.nl</a></p>'))
+						.setHTML('<h2>' + marker.properties.Name + '</h2><p><b>Company Address</b><br>' + marker.properties.VA_loc + '</p><p><b>Correspondence Address</b><br>' + marker.properties.CA_loc + '</p><p><b>SBI</b><br>' + marker.properties.SBI + '</p><p><b>Suspiciousness</b><br>' + marker.properties.score + '</p><p><b>Website: </b><a href = '+ marker.properties.url_s +' target="_blank">' + marker.properties.url_s + '</a></p>'))
 						.addTo(map);
 
 						// add marker reference to the list of all current markers
