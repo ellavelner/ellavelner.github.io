@@ -83,7 +83,6 @@ footer {
 	background-color: #E6E6E6;
 	z-index: 10;
 	bottom: 0;
-	position: fixed;
 	width: 100%;
 }
 
@@ -160,11 +159,6 @@ h2 {
 .how p {
 	display: inline-block;
 	padding: 5px;
-}
-
-.functions {
-	float: left;
-	
 }
 
 #nl, #gron, #fries, #dren, #flev, #ovrij, #geld, #utr, #nrdh, #zdhl, #zeel, #nrdb, #limb {
