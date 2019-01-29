@@ -25,43 +25,50 @@
 			<input id="myInput" type="text" name="myCompany" placeholder="Search for a company">
 		</div>
 	</form>
-	<br>
-	<button id='nl'>The Netherlands</button>
-	<button id='gron'>Groningen</button>
-	<button id='fries'>Friesland</button>
-	<button id='dren'>Drenthe</button>
-	<button id='ovrij'>Overijssel</button>
-	<button id='flev'>Flevoland</button>
-	<button id='geld'>Gelderland</button>
-	<button id='utr'>Utrecht</button>
-	<button id='nrdh'>Noord-Holland</button>
-	<button id='zdhl'>Zuid-Holland</button>
-	<button id='zeel'>Zeeland</button>
-	<button id='nrdb'>Noord-Brabant</button>
-	<button id='limb'>Limburg</button>
-	
-	<div class="filter">
-		<label class="container"><p class="txt">Show all</p>
-		<input type="radio" name="radio" checked="checked" onClick="renderMarkers('all');">
-		<span class="checkmark"></span>
-		</label>
+		
+	<div class="functions">
+		<div class="zooms">
+			<button id='nl'>The Netherlands</button>
+			<div class="dropdown">
+				<button class="dropbtn">Provinces</button>
+				<div class="dropdown-content">
+					<a href="#" id='gron'>Groningen</a>
+					<a href="#" id='fries'>Friesland</a>
+					<a href="#" id='dren'>Drenthe</a>
+					<a href="#" id='ovrij'>Overijssel</a>
+					<a href="#" id='flev'>Flevoland</a>
+					<a href="#" id='geld'>Gelderland</a>
+					<a href="#" id='utr'>Utrecht</a>
+					<a href="#" id='nrdh'>Noord-Holland</a>
+					<a href="#" id='zdhl'>Zuid-Holland</a>
+					<a href="#" id='zeel'>Zeeland</a>
+					<a href="#" id='nrdb'>Noord-Brabant</a>
+					<a href="#" id='limb'>Limburg</a>
+				</div>
+			</div> 
+		</div>
+		<div class="filter">
+			<label class="container"><p class="txt">Show all</p>
+			<input type="radio" name="radio" checked="checked" onClick="renderMarkers('all');">
+			<span class="checkmark"></span>
+			</label>
 
-		<label class="container"><p class="txt">Not suspicious</p>
-		<input type="radio" name="radio" onClick="renderMarkers('low')">
-		<span class="checkmark"></span>
-		</label>
+			<label class="container"><p class="txt">Not suspicious</p>
+			<input type="radio" name="radio" onClick="renderMarkers('low')">
+			<span class="checkmark"></span>
+			</label>
 
-		<label class="container"><p class="txt">A bit suspicious</p>
-		<input type="radio" name="radio" onClick="renderMarkers('medium')">
-		<span class="checkmark"></span>
-		</label>
+			<label class="container"><p class="txt">A bit suspicious</p>
+			<input type="radio" name="radio" onClick="renderMarkers('medium')">
+			<span class="checkmark"></span>
+			</label>
 
-		<label class="container"><p class="txt">Highly suspicious</p>
-		<input type="radio" name="radio" onClick="renderMarkers('high')">
-		<span class="checkmark"></span>
-		</label>
+			<label class="container"><p class="txt">Highly suspicious</p>
+			<input type="radio" name="radio" onClick="renderMarkers('high')">
+			<span class="checkmark"></span>
+			</label>
+		</div>
 	</div>
-	
 	<footer>
 		<p>A website made by Don, Ella, Jeffrey, Rouel, Roza &amp; Wessel &copy; 2019 </p>
 	</footer>

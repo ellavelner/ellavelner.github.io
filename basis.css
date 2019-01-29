@@ -84,6 +84,7 @@ footer {
 	z-index: 10;
 	bottom: 0;
 	width: 100%;
+	position: fixed;
 }
 
 footer p {
@@ -161,22 +162,84 @@ h2 {
 	padding: 5px;
 }
 
-#nl, #gron, #fries, #dren, #flev, #ovrij, #geld, #utr, #nrdh, #zdhl, #zeel, #nrdb, #limb {
+.functions {
+	position: relative;
+	float: left;
+	margin-top: 1%;
+	margin-left: 2%;
+	width: 90%;
+	height: 90%;
+}
+
+.zooms {
+	float: left;
+}
+
+#nl, .dropbtn {
     display: block;
     position: relative;
     margin-left: 2%;
 	margin-bottom: 1%;
-    width: 10%;
+	margin-top: 10%;
     height: 30px;
-    border: none;
+    width: 140px;
+	border: none;
     border-radius: 3px;
     font-size: 12px;
     text-align: center;
     color: #fff;
     background: #084781;
 	cursor: pointer;
-	float: right;
 }
+
+.dropbtn{
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.dropbtn:hover {
+	color: #000;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: #eee;
+  margin-left: 2%;
+  /*border: 1px solid #084781;*/
+  z-index: 1;
+  font-size: 12px;
+}
+
+.dropdown-content a {
+  color: #084781;
+  padding: 4% 6%;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #BE9659;
+	color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #084781;
+}
+
+/*#gron, #fries, #dren, #flev, #ovrij, #geld, #utr, #nrdh, #zdhl, #zeel, #nrdb, #limb {
+	
+}*/
 
 #nl:hover, #gron:hover, #fries:hover, #dren:hover, #flev:hover, #ovrij:hover, #geld:hover, #utr:hover, #nrdh:hover, #zdhl:hover, #zeel:hover, #nrdb:hover, #limb:hover {
 	color: #000;
@@ -269,14 +332,16 @@ h2 {
 /* filter */
 .filter {
 	position: absolute;
-    margin-left: 13%;
+    margin-left: 150px;
 	margin-bottom: 1%;
-	margin-top: 140px;
+	margin-top: 1%;
+	min-width: 130px;
 	background-color: rgba(238, 238, 238, 0.4);
 	border: 2px solid #ccc;
 	padding: 1%;
 	border-radius: 5%;
 	width: 11%;
+	float: right;
 }
 
 /* The container */
@@ -349,3 +414,4 @@ h2 {
 .txt {
 	padding-left: 5%;
 }
+
