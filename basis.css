@@ -236,14 +236,14 @@ h2 {
   background-color: #084781;
 }
 
-/*#gron, #fries, #dren, #flev, #ovrij, #geld, #utr, #nrdh, #zdhl, #zeel, #nrdb, #limb {
-	
-}*/
-
-#nl:hover, #gron:hover, #fries:hover, #dren:hover, #flev:hover, #ovrij:hover, #geld:hover, #utr:hover, #nrdh:hover, #zdhl:hover, #zeel:hover, #nrdb:hover, #limb:hover {
+#nl:hover {
 	color: #000;
 }
 
+#gron:hover, #fries:hover, #dren:hover, #flev:hover, #ovrij:hover, #geld:hover, #utr:hover, #nrdh:hover, #zdhl:hover, #zeel:hover, #nrdb:hover, #limb:hover {
+	color: #fff;
+}
+	
 #map {
     position: absolute;
     top: 0;
