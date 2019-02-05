@@ -55,17 +55,17 @@
 
 			<label class="container"><p class="txt">Not suspicious</p>
 			<input type="radio" name="radio" onClick="renderMarkers('low')">
-			<span class="checkmark"></span>
+			<span class="checkmark green"></span>
 			</label>
 
 			<label class="container"><p class="txt">A bit suspicious</p>
 			<input type="radio" name="radio" onClick="renderMarkers('medium')">
-			<span class="checkmark"></span>
+			<span class="checkmark yellow"></span>
 			</label>
 
 			<label class="container"><p class="txt">Highly suspicious</p>
 			<input type="radio" name="radio" onClick="renderMarkers('high')">
-			<span class="checkmark"></span>
+			<span class="checkmark red"></span>
 			</label>
 		</div>
 	</div>
@@ -208,7 +208,7 @@
     },
     "properties": {
 		"FIELD1":2,
-		"Name":"XYZ Transport",
+		"Name":"Pax Bouw en Indus.serv. B.V.",
 		"GEMNAAM":"HEERENVEEN",
 		"SEXE":"N",
 		"RECHTSVORM (dummies)":41,
@@ -4671,7 +4671,7 @@
 				var markerReference = new mapboxgl.Marker(el)
 				.setLngLat(marker.geometry.coordinates)
 				.setPopup(new mapboxgl.Popup({offset: 10}) // add popups
-				.setHTML('<h2>XYZ Transport</h2><p><b>Company Address</b><br>Industrieterrein 1A ' + marker.properties.GEMNAAM + ' 1234AB</p><p><b>Correspondence Address</b><br>Postbus 123 ' + marker.properties.GEMNAAM + '</p><p><b>Dossiercode</b><br>' + marker.properties.DOSSIER + '</p><p><b>Suspiciousness</b><br>' + marker.properties.score + '</p><p><b>Website: </b><a target="_blank">www.xyztransport.nl</a></p>'))
+				.setHTML('<h2>' + marker.properties.Name + '</h2><p><b>Company Address</b><br>' + marker.properties.VA_loc + '</p><p><b>Correspondence Address</b><br>' + marker.properties.CA_loc + '</p><p><b>Dossiercode</b><br>' + marker.properties.DOSSIER + '</p><p><b>Suspiciousness</b><br>' + marker.properties.score + '</p><p><b>Website: </b><a src="' + marker.properties.url_s + '" target="_blank">' + marker.properties.url_s + '</a></p>'))
 				.addTo(map);
 
 				// add marker reference to the list of all current markers
@@ -4736,7 +4736,7 @@
 						var markerReference = new mapboxgl.Marker(el)
 						.setLngLat(marker.geometry.coordinates)
 						.setPopup(new mapboxgl.Popup({offset: 10}) // add popups
-						.setHTML('<h2>XYZ Transport</h2><p><b>Company Address</b><br>Industrieterrein 1A ' + marker.properties.GEMNAAM + ' 1234AB</p><p><b>Correspondence Address</b><br>Postbus 123 ' + marker.properties.GEMNAAM + '</p><p><b>Dossiercode</b><br>' + marker.properties.DOSSIER + '</p><p><b>Suspiciousness</b><br>' + marker.properties.score + '</p><p><b>Website: </b><a target="_blank">www.xyztransport.nl</a></p>'))
+						.setHTML('<h2>' + marker.properties.Name + '</h2><p><b>Company Address</b><br>' + marker.properties.VA_loc + '</p><p><b>Correspondence Address</b><br>' + marker.properties.CA_loc + '</p><p><b>Dossiercode</b><br>' + marker.properties.DOSSIER + '</p><p><b>Suspiciousness</b><br>' + marker.properties.score + '</p><p><b>Website: </b><a src=' + marker.properties.url_s + ' target="_blank">' + marker.properties.url_s + '</a></p>'))
 						.addTo(map);
 
 						// add marker reference to the list of all current markers
