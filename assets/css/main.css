@@ -2100,6 +2100,16 @@ input, select, textarea {
 				border: 0.2em solid #7da4a7;
 			}
 
+			.image.gallery:hover:after {
+				opacity: 0;
+				border: none;
+			}
+
+			.image.gallery:hover:before {
+				opacity: 0;
+				border: none;
+			}
+			
 		.image img {
 			border-radius: 0.35em;
 			display: block;
