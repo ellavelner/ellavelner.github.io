@@ -2661,7 +2661,7 @@ input, select, textarea {
 		}
 		
 		#header .nav {
-			width: 110%;
+			width: 104%;
 		}
 		
 		#header .nav ul #now {
@@ -3291,9 +3291,31 @@ input, select, textarea {
 	
 	.furhat {
 		margin-left: 3%;
+	}
 
 
-/* blog stuff */
+video {
+	border-radius: 0.35em;
+	margin: 0 auto;
+	display: block;
+}
 
+/* blog */
 
+.date {
+	font-style: italic; 
+	font-size: small; 
+	float:right;
+}
+
+.blogtitle {
+	margin-bottom: 0;
+}
+	
+.blogimg {
+	float:left; 
+	max-width:200px; 
+	border-radius: 0.35em; 
+	margin: 0.5em 1em 0 0;
+}
 	
