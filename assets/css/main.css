@@ -3300,6 +3300,12 @@ video {
 	display: block;
 }
 
+figcaption {
+	font-style:italic; 
+	font-size:small; 
+	text-align:center
+}
+
 /* blog */
 
 .date {
