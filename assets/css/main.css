@@ -237,6 +237,10 @@ input, select, textarea {
 	.align-right {
 		text-align: right;
 	}
+	
+	.publication li {
+		text-indent: -1em;
+	}
 
 /* Container */
 
