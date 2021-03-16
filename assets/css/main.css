@@ -238,9 +238,7 @@ input, select, textarea {
 		text-align: right;
 	}
 	
-	.publication li {
-		text-indent: -1em;
-	}
+	
 
 /* Container */
 
@@ -3328,5 +3326,12 @@ figcaption {
 	max-width:200px; 
 	border-radius: 0.35em; 
 	margin: 0.5em 1em 0 0;
+}
+
+.right{
+	float:right; 
+	max-width:200px; 
+	border-radius: 0.35em; 
+	margin: 0 0 0 1em;
 }
 	
