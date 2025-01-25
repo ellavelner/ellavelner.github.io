@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ella Velner | Soundboard</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		
+	</head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DDQGVJPVV0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-DDQGVJPVV0');
+    </script>
+<body class="is-preload">
+
+	<!-- Main -->
+	<div id="soundboard">
+        <div class="begin">
+		    <audio id="mensen" src="sounds/mensen.mp3" preload="auto"></audio>
+            <audio id="bord" src="sounds/bord.mp3" preload="auto"></audio>
+            <audio id="vraagklass" src="sounds/vraagklass.mp3" preload="auto"></audio>
+            <audio id="vraagzelfst" src="sounds/vraagzelfst.mp3" preload="auto"></audio>
+            <audio id="overleg" src="sounds/overleg.mp3" preload="auto"></audio>
+            <audio id="koptelefoon" src="sounds/koptelefoon.mp3" preload="auto"></audio>
+            <audio id="koptelefoonaf" src="sounds/koptelefoonaf.mp3" preload="auto"></audio>
+            <button class="board" onclick="document.getElementById('mensen').play();">Lieve mensen</button>
+            <button class="board" onclick="document.getElementById('bord').play();">Aandacht op bord</button>
+            <button class="board" onclick="document.getElementById('vraagklass').play();">Zijn er vragen</button>
+            <button class="board" onclick="document.getElementById('vraagzelfst').play();">Heb je een vraag</button>
+            <button class="board" onclick="document.getElementById('overleg').play();">Overleggen mag</button>
+            <button class="board" onclick="document.getElementById('koptelefoon').play();">Koptelefoons mogen</button>
+            <button class="board" onclick="document.getElementById('koptelefoonaf').play();">Koptelefoons af</button>
+        </div>
+        <div class="werk">
+            <audio id="werk" src="sounds/werk.mp3" preload="auto"></audio>
+            <audio id="stil" src="sounds/stil.mp3" preload="auto"></audio>
+            <audio id="geluid" src="sounds/geluid.mp3" preload="auto"></audio>           
+            <audio id="volume" src="sounds/volume.mp3" preload="auto"></audio>
+            <audio id="boat" src="sounds/boat.mp3" preload="auto"></audio>
+            <audio id="airhorn" src="sounds/airhorn.mp3" preload="auto"></audio>
+  		    <button class="board" onclick="document.getElementById('werk').play();">Aan het werk</button>
+            <button class="board" onclick="document.getElementById('stil').play();">Stilte ajb</button>
+            <button class="board" onclick="document.getElementById('geluid').play();">Geluid met koptelefoon</button>
+            <button class="board" onclick="document.getElementById('volume').play();">Te luid</button>
+            <button class="board" onclick="document.getElementById('boat').play();">Boothoorn</button>
+            <button class="board" onclick="document.getElementById('airhorn').play();">Luchthoorn</button>
+        </div>
+        <div class="einde">
+            <audio id="goedgewerkt" src="sounds/goed gewerkt.mp3" preload="auto"></audio>
+            <audio id="eindeles" src="sounds/eindeles.mp3" preload="auto"></audio>
+  		    <button class="board" onclick="document.getElementById('goedgewerkt').play();">Goed gewerkt!</button>
+            <button class="board" onclick="document.getElementById('eindeles').play();">Einde les</button>
+        </div>
+        <div class="doel">
+            <audio id="steldoel" src="sounds/steldoel.mp3" preload="auto"></audio>
+            <audio id="checkdoel" src="sounds/checkdoel.mp3" preload="auto"></audio>
+  		    <button class="board" onclick="document.getElementById('steldoel').play();">Stel doel</button>
+            <button class="board" onclick="document.getElementById('checkdoel').play();">Check doel</button>
+        </div>
+	</div>
+</body>
+</html>
