@@ -19,8 +19,9 @@
 <body class="is-preload">
 
 	<!-- Main -->
-	<div id="soundboard">
+	<div class="soundboard">
         <div class="begin">
+            <h4>Start les</h4>
 		    <audio id="mensen" src="sounds/mensen.mp3" preload="auto"></audio>
             <audio id="bord" src="sounds/bord.mp3" preload="auto"></audio>
             <audio id="vraagklass" src="sounds/vraagklass.mp3" preload="auto"></audio>
@@ -37,30 +38,84 @@
             <button class="board" onclick="document.getElementById('koptelefoonaf').play();">Koptelefoons af</button>
         </div>
         <div class="werk">
+            <h4>Tijdens het werk</h4>
             <audio id="werk" src="sounds/werk.mp3" preload="auto"></audio>
             <audio id="stil" src="sounds/stil.mp3" preload="auto"></audio>
             <audio id="geluid" src="sounds/geluid.mp3" preload="auto"></audio>           
             <audio id="volume" src="sounds/volume.mp3" preload="auto"></audio>
             <audio id="boat" src="sounds/boat.mp3" preload="auto"></audio>
             <audio id="airhorn" src="sounds/airhorn.mp3" preload="auto"></audio>
-  		    <button class="board" onclick="document.getElementById('werk').play();">Aan het werk</button>
+            <audio id="afblijven" src="sounds/afblijven.mp3" preload="auto"></audio>
+            <button class="board" onclick="document.getElementById('werk').play();">Aan het werk</button>
             <button class="board" onclick="document.getElementById('stil').play();">Stilte ajb</button>
             <button class="board" onclick="document.getElementById('geluid').play();">Geluid met koptelefoon</button>
             <button class="board" onclick="document.getElementById('volume').play();">Te luid</button>
+            <button class="board" onclick="document.getElementById('afblijven').play();">Afblijven</button>
             <button class="board" onclick="document.getElementById('boat').play();">Boothoorn</button>
             <button class="board" onclick="document.getElementById('airhorn').play();">Luchthoorn</button>
         </div>
         <div class="einde">
+            <h4>Einde les</h4>
             <audio id="goedgewerkt" src="sounds/goed gewerkt.mp3" preload="auto"></audio>
             <audio id="eindeles" src="sounds/eindeles.mp3" preload="auto"></audio>
   		    <button class="board" onclick="document.getElementById('goedgewerkt').play();">Goed gewerkt!</button>
             <button class="board" onclick="document.getElementById('eindeles').play();">Einde les</button>
         </div>
         <div class="doel">
+            <h4>Doel</h4>
             <audio id="steldoel" src="sounds/steldoel.mp3" preload="auto"></audio>
             <audio id="checkdoel" src="sounds/checkdoel.mp3" preload="auto"></audio>
   		    <button class="board" onclick="document.getElementById('steldoel').play();">Stel doel</button>
             <button class="board" onclick="document.getElementById('checkdoel').play();">Check doel</button>
+        </div>
+    </div>
+    <div class="soundboard">
+        <div class="algemeen">
+            <h4>Algemeen</h4>
+            <audio id="ja" src="sounds/ja.mp3" preload="auto"></audio>
+            <audio id="nee" src="sounds/nee.mp3" preload="auto"></audio>
+            <audio id="klopt" src="sounds/klopt.mp3" preload="auto"></audio>
+            <audio id="hoezo" src="sounds/hoezo.mp3" preload="auto"></audio>
+            <audio id="waarom" src="sounds/waarom.mp3" preload="auto"></audio>
+            <audio id="heelgoed" src="sounds/heelgoed.mp3" preload="auto"></audio>
+  		    <button class="board" onclick="document.getElementById('ja').play();">Ja</button>
+            <button class="board" onclick="document.getElementById('nee').play();">Nee</button>
+            <button class="board" onclick="document.getElementById('klopt').play();">Klopt</button>
+            <button class="board" onclick="document.getElementById('hoezo').play();">Hoezo?</button>
+            <button class="board" onclick="document.getElementById('waarom').play();">Waarom?</button>
+            <button class="board" onclick="document.getElementById('heelgoed').play();">Heel goed</button>
+        </div>
+        <div class="individu">
+            <h4>Individu</h4>
+            <audio id="instructie" src="sounds/instructie.mp3" preload="auto"></audio>
+            <audio id="probleemaanwijzen" src="sounds/probleemaanwijzen.mp3" preload="auto"></audio>
+            <audio id="probleemsignalen" src="sounds/probleemsignalen.mp3" preload="auto"></audio>
+            <audio id="stappen" src="sounds/stappen.mp3" preload="auto"></audio>
+            <audio id="vastgelopen" src="sounds/vastgelopen.mp3" preload="auto"></audio>
+            <audio id="totnutoe" src="sounds/totnutoe.mp3" preload="auto"></audio>
+            <audio id="verbeteren" src="sounds/verbeteren.mp3" preload="auto"></audio>
+            <audio id="watwiljedoen" src="sounds/watwiljedoen.mp3" preload="auto"></audio>
+            <button class="board" onclick="document.getElementById('instructie').play();">Instructie gelezen?</button>
+            <button class="board" onclick="document.getElementById('probleemaanwijzen').play();">Probleem aanwijzen?</button>
+            <button class="board" onclick="document.getElementById('probleemsignalen').play();">Zie je signalen?</button>
+            <button class="board" onclick="document.getElementById('stappen').play();">Stappen?</button>
+            <button class="board" onclick="document.getElementById('vastgelopen').play();">Waar vastgelopen?</button>
+            <button class="board" onclick="document.getElementById('totnutoe').play();">Wat tot nu toe?</button>
+            <button class="board" onclick="document.getElementById('verbeteren').play();">Wat verbeteren?</button>
+            <button class="board" onclick="document.getElementById('watwiljedoen').play();">Wat wil je doen?</button>
+        </div>
+        <div class="feedback">
+            <h4>Feedback</h4>
+            <audio id="stapjesfb" src="sounds/stapjesfb.mp3" preload="auto"></audio>
+            <audio id="zelfstandigfb" src="sounds/zelfstandigfb.mp3" preload="auto"></audio>
+            <audio id="afgeleid" src="sounds/afgeleid.mp3" preload="auto"></audio>
+            <audio id="uitproberen" src="sounds/uitproberen.mp3" preload="auto"></audio>
+            <audio id="super" src="sounds/super.mp3" preload="auto"></audio>
+            <button class="board" onclick="document.getElementById('stapjesfb').play();">Stapjes goed door</button>
+            <button class="board" onclick="document.getElementById('zelfstandigfb').play();">Zelfstandig opgelost</button>
+            <button class="board" onclick="document.getElementById('afgeleid').play();">Afgeleid</button>
+            <button class="board" onclick="document.getElementById('uitproberen').play();">Exploratief</button>
+            <button class="board" onclick="document.getElementById('super').play();">Super!</button>
         </div>
 	</div>
 </body>

@@ -3466,7 +3466,7 @@ figcaption {
 
 /* soundboard */
 
-#soundboard {
+.soundboard {
 	margin: 2em 5em;
 	display: flex;
 	align-items: first baseline;
@@ -3474,7 +3474,7 @@ figcaption {
 	vertical-align: center;
 }
 
-#soundboard div {
+.soundboard div {
 	margin: 0.5em;
 	padding: 0.5em;
 	
@@ -3484,13 +3484,11 @@ figcaption {
 	width: 10em;
 	height: 10em;
 	padding: 0.5em;
-}
-
-.board {
 	display: inline-block;
 	margin: 0.25em;
 	border-radius: 10%;
 	vertical-align: top;
+	box-shadow: 0.3em 0.3em #999;
 }
 
 .begin button {
@@ -3513,7 +3511,28 @@ figcaption {
 	color: #e6ecec;
 }
 
+.algemeen button {
+	background-color: #998be7;
+	color: #e6ecec;
+}
+
+.individu button {
+	background-color: #705be5;
+	color: #e6ecec;
+}
+
+.feedback button {
+	background-color: #3e2da2;
+	color: #e6ecec;
+}
+
 .board:hover {
 	background-color: lightcyan;
 	color: black;
 }
+
+.board:active {
+	background-color: lightcyan;
+	box-shadow: 0.1em 0.1em #666;
+	transform: translate(0.2em, 0.2em);
+  }
