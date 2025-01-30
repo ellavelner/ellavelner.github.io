@@ -3549,3 +3549,21 @@ figcaption {
 	box-shadow: 0.1em 0.1em #666;
 	transform: translate(0.2em, 0.2em);
   }
+
+.maintxt {
+	margin: 5%;
+}
+
+.visitorcount {
+	margin-left:40%;
+	margin-right:40%;
+}
+
+.maintxt h1{
+	font-family: "Racing Sans One";
+	font-size: 40px;
+}
+
+.maintxt p{
+	font-family: 'Share Tech Mono';
+}
